@@ -43,7 +43,7 @@ const movies = [
 const moviesDocuments = movies.map(movie => new Movie(movie));
 
 mongoose
-    .connect(process.env.DB_URL+'/'+process.env.DB_NAME)
+    .connect(process.env.DB_URL)
     .then(async () => {
         const allMovies = await Movie.find();
 

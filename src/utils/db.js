@@ -5,9 +5,9 @@ const connectDB = async () => {
         await mongoose.connect(process.env.DB_URL);
         console.log('Conectado a la BBDD')
     } catch(err) {
-        console.log('Error en la conexión con la BBDD')
+        console.log('Error en la conexión con la BBDD ->', err)
     }
 };
 
-module.exports = { connectDB };
+module.exports = connectDB;
 
